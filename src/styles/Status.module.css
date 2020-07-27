@@ -1,0 +1,33 @@
+.statusContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0em;
+  width: 100%;
+  background: black;
+  border: 1px solid white;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+}
+
+.value {
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .value {
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .value {
+    font-size: 115%;
+  }
+}

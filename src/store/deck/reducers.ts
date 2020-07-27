@@ -46,7 +46,7 @@ export const deckReducer = (
     case ActionType.REVEAL_HIDDEN_CARD:
       return produce(state, (s: DeckState) => {
         const dealerCards = s.dealerCards.filter((card: Card) => {
-          card.hidden = card.hidden === true ? false : true;
+          if (card.hidden) card.hidden = false;
           return card;
         });
 

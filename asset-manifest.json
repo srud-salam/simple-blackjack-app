@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/srud-salam/simple-blackjack-app/static/css/main.55e875fc.chunk.css",
-    "main.js": "/srud-salam/simple-blackjack-app/static/js/main.f559d645.chunk.js",
-    "main.js.map": "/srud-salam/simple-blackjack-app/static/js/main.f559d645.chunk.js.map",
-    "runtime-main.js": "/srud-salam/simple-blackjack-app/static/js/runtime-main.a170318a.js",
-    "runtime-main.js.map": "/srud-salam/simple-blackjack-app/static/js/runtime-main.a170318a.js.map",
-    "static/js/2.8dcca496.chunk.js": "/srud-salam/simple-blackjack-app/static/js/2.8dcca496.chunk.js",
-    "static/js/2.8dcca496.chunk.js.map": "/srud-salam/simple-blackjack-app/static/js/2.8dcca496.chunk.js.map",
-    "index.html": "/srud-salam/simple-blackjack-app/index.html",
-    "precache-manifest.fca52a6e2863d7716cc27dbc4f1abf12.js": "/srud-salam/simple-blackjack-app/precache-manifest.fca52a6e2863d7716cc27dbc4f1abf12.js",
-    "service-worker.js": "/srud-salam/simple-blackjack-app/service-worker.js",
-    "static/css/main.55e875fc.chunk.css.map": "/srud-salam/simple-blackjack-app/static/css/main.55e875fc.chunk.css.map",
-    "static/js/2.8dcca496.chunk.js.LICENSE.txt": "/srud-salam/simple-blackjack-app/static/js/2.8dcca496.chunk.js.LICENSE.txt"
+    "main.css": "/simple-blackjack-app/static/css/main.55e875fc.chunk.css",
+    "main.js": "/simple-blackjack-app/static/js/main.11e50f74.chunk.js",
+    "main.js.map": "/simple-blackjack-app/static/js/main.11e50f74.chunk.js.map",
+    "runtime-main.js": "/simple-blackjack-app/static/js/runtime-main.fb2ef247.js",
+    "runtime-main.js.map": "/simple-blackjack-app/static/js/runtime-main.fb2ef247.js.map",
+    "static/js/2.8dcca496.chunk.js": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js",
+    "static/js/2.8dcca496.chunk.js.map": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js.map",
+    "index.html": "/simple-blackjack-app/index.html",
+    "precache-manifest.ba68bad583daacbf6c589f864009f953.js": "/simple-blackjack-app/precache-manifest.ba68bad583daacbf6c589f864009f953.js",
+    "service-worker.js": "/simple-blackjack-app/service-worker.js",
+    "static/css/main.55e875fc.chunk.css.map": "/simple-blackjack-app/static/css/main.55e875fc.chunk.css.map",
+    "static/js/2.8dcca496.chunk.js.LICENSE.txt": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a170318a.js",
+    "static/js/runtime-main.fb2ef247.js",
     "static/js/2.8dcca496.chunk.js",
     "static/css/main.55e875fc.chunk.css",
-    "static/js/main.f559d645.chunk.js"
+    "static/js/main.11e50f74.chunk.js"
   ]
 }

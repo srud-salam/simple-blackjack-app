@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/simple-blackjack-app/static/css/main.55e875fc.chunk.css",
-    "main.js": "/simple-blackjack-app/static/js/main.35312bba.chunk.js",
-    "main.js.map": "/simple-blackjack-app/static/js/main.35312bba.chunk.js.map",
+    "main.js": "/simple-blackjack-app/static/js/main.675fd61e.chunk.js",
+    "main.js.map": "/simple-blackjack-app/static/js/main.675fd61e.chunk.js.map",
     "runtime-main.js": "/simple-blackjack-app/static/js/runtime-main.fb2ef247.js",
     "runtime-main.js.map": "/simple-blackjack-app/static/js/runtime-main.fb2ef247.js.map",
-    "static/js/2.8dcca496.chunk.js": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js",
-    "static/js/2.8dcca496.chunk.js.map": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js.map",
+    "static/js/2.2854d4be.chunk.js": "/simple-blackjack-app/static/js/2.2854d4be.chunk.js",
+    "static/js/2.2854d4be.chunk.js.map": "/simple-blackjack-app/static/js/2.2854d4be.chunk.js.map",
     "index.html": "/simple-blackjack-app/index.html",
-    "precache-manifest.dc28789658ac9ecea7ab2263b9ed4492.js": "/simple-blackjack-app/precache-manifest.dc28789658ac9ecea7ab2263b9ed4492.js",
+    "precache-manifest.2685eeb43b2cb0251c44d6bbc84e537b.js": "/simple-blackjack-app/precache-manifest.2685eeb43b2cb0251c44d6bbc84e537b.js",
     "service-worker.js": "/simple-blackjack-app/service-worker.js",
     "static/css/main.55e875fc.chunk.css.map": "/simple-blackjack-app/static/css/main.55e875fc.chunk.css.map",
-    "static/js/2.8dcca496.chunk.js.LICENSE.txt": "/simple-blackjack-app/static/js/2.8dcca496.chunk.js.LICENSE.txt"
+    "static/js/2.2854d4be.chunk.js.LICENSE.txt": "/simple-blackjack-app/static/js/2.2854d4be.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb2ef247.js",
-    "static/js/2.8dcca496.chunk.js",
+    "static/js/2.2854d4be.chunk.js",
     "static/css/main.55e875fc.chunk.css",
-    "static/js/main.35312bba.chunk.js"
+    "static/js/main.675fd61e.chunk.js"
   ]
 }

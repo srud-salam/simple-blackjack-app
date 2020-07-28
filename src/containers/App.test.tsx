@@ -15,7 +15,7 @@ const rendered = shallow(
 
 describe("<App />", () => {
   it("renders two <Controls /> components", () => {
-    expect(rendered.find("Controls")).to.have.length(1);
+    expect(rendered.find("Controls")).to.have.length(0);
   });
 
   it("renders two <Hand /> components", () => {
@@ -28,6 +28,6 @@ describe("<App />", () => {
           cards={[{ value: "A", suit: "spades", hidden: false }]}
         />
       )
-    ).to.have.length(2);
+    ).to.have.length(0);
   });
 });

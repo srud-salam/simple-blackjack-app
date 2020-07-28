@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Status.module.css";
 
 type StatusProps = {
-    message: string;
+  message: string;
 };
 
 const Status: React.FC<StatusProps> = ({ message }) => {

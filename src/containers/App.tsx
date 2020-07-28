@@ -5,7 +5,7 @@ import Controls from "../components/Controls";
 import Status from '../components/Status';
 import {RootState} from "../store";
 import {DeckState, Deal} from "../store/deck/types";
-import {drawDeckAction, drawCardAction, calculateScoreAction, ReavelHiddenCardAction} from "../store/deck/actions";
+import {drawDeckAction, drawCardAction, calculateScoreAction, reavelHiddenCardAction} from "../store/deck/actions";
 
 const App: React.FC = () => {
 	
@@ -38,12 +38,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (gameState === GameState.initStart) {
-		//dispatch(drawDeckAction(GameState.initStart));
-	  dispatch(drawCardAction(Deal.player));
-	  dispatch(drawCardAction(Deal.hidden));	   
-	  dispatch(drawCardAction(Deal.player));
-      dispatch(drawCardAction(Deal.dealer));	  
-	  	  
+	  dispatch(drawDeckAction(GameState.initStart));
       setGameState(GameState.playerTurn);
       setMessage(Message.hitStick);
     }
@@ -110,7 +105,7 @@ const App: React.FC = () => {
     buttonState.resetDisabled = false;
     setButtonState({ ...buttonState });
     setGameState(GameState.dealerTurn);
-	dispatch(ReavelHiddenCardAction(true));
+	dispatch(reavelHiddenCardAction(false));
   }
 
   const bust = () => {

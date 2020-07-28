@@ -15,7 +15,7 @@ export const calculateScoreAction = (dealType: Deal): DeckActionTypes => ({
   dealType,
 });
 
-export const ReavelHiddenCardAction = (hidden: boolean): DeckActionTypes => ({
+export const reavelHiddenCardAction = (hidden: boolean): DeckActionTypes => ({
   type: ActionType.REVEAL_HIDDEN_CARD,
   hidden,
 });

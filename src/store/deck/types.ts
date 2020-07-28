@@ -31,13 +31,16 @@ export interface DeckState {
   dealerScore: number;
 }
 
-type DrawDeckAction = { type: ActionType.DRAW_DECK; gameState: GameState };
-type DrawCardAction = { type: ActionType.DRAW_CARD; dealType: Deal };
-type CalculateScoreAction = {
+export type DrawDeckAction = {
+  type: ActionType.DRAW_DECK;
+  gameState: GameState;
+};
+export type DrawCardAction = { type: ActionType.DRAW_CARD; dealType: Deal };
+export type CalculateScoreAction = {
   type: ActionType.CALCULATE_SCORE;
   dealType: Deal;
 };
-type ReavelHiddenCardAction = {
+export type ReavelHiddenCardAction = {
   type: ActionType.REVEAL_HIDDEN_CARD;
   hidden: boolean;
 };

@@ -1,6 +1,8 @@
 import { Card, DeckState, DeckActionTypes, ActionType, Deal } from "./types";
 import jsonData from "./deck.json";
 import produce from "immer";
+import { getTotalScore } from "../helpers/getTotalScore";
+import { moveCard } from "../helpers/moveCard";
 
 const initialState: DeckState = {
   deckCards: JSON.parse(JSON.stringify(jsonData.cards)),
@@ -16,12 +18,11 @@ export const deckReducer = (
 ): DeckState => {
   switch (action.type) {
     case ActionType.DRAW_DECK:
-      const newDeck = produce(initialState, (s) => {
-        moveCard(s, Deal.player);
-        moveCard(s, Deal.hidden);
-        moveCard(s, Deal.player);
-        moveCard(s, Deal.dealer);
-      });
+      const newState = initialState;
+      let newDeck = moveCard(newState, Deal.player);
+      newDeck = moveCard(newDeck, Deal.hidden);
+      newDeck = moveCard(newDeck, Deal.player);
+      newDeck = moveCard(newDeck, Deal.dealer);
       return newDeck;
 
     case ActionType.DRAW_CARD:
@@ -39,14 +40,17 @@ export const deckReducer = (
         });
       }
 
-      return produce(state, (s: DeckState) => {
-        s.dealerScore = getTotalScore(state.dealerCards);
-      });
+      if (action.dealType === Deal.dealer) {
+        return produce(state, (s: DeckState) => {
+          s.dealerScore = getTotalScore(state.dealerCards);
+        });
+      }
+      return state;
 
     case ActionType.REVEAL_HIDDEN_CARD:
       return produce(state, (s: DeckState) => {
         const dealerCards = s.dealerCards.filter((card: Card) => {
-          if (card.hidden) card.hidden = false;
+          if (card.hidden) card.hidden = action.hidden;
           return card;
         });
 
@@ -56,64 +60,4 @@ export const deckReducer = (
     default:
       return state;
   }
-};
-
-const moveCard = (state: DeckState, dealType: Deal) => {
-  const key: number = Math.floor(Math.random() * state.deckCards.length);
-  const card: Card = state.deckCards[key];
-
-  if (dealType === Deal.player) {
-    return produce(state, (s) => {
-      s.deckCards.splice(key, 1);
-      s.playerCards = [...s.playerCards, { ...card, hidden: false }];
-    });
-  }
-
-  if (dealType === Deal.dealer) {
-    return produce(state, (s) => {
-      s.deckCards.splice(key, 1);
-      s.dealerCards = [...s.dealerCards, { ...card, hidden: false }];
-    });
-  }
-
-  return produce(state, (s) => {
-    s.deckCards.splice(key, 1);
-    s.dealerCards = [...s.dealerCards, { ...card, hidden: true }];
-  });
-};
-
-const getTotalScore = (cards: Card[]) => {
-  let totalScore: number = 0;
-
-  const aces = cards.filter((card) => {
-    if (card.value === "K" || card.value === "Q" || card.value === "J") {
-      totalScore += 10;
-      return false;
-    }
-
-    if (Number.isInteger(+card.value)) {
-      totalScore += +card.value;
-      return false;
-    }
-
-    return card.value === "A";
-  });
-
-  aces.forEach((card: Card) => {
-    if (card.hidden === false) {
-      if (totalScore + 11 > 21) {
-        totalScore += 1;
-      } else if (totalScore + 11 === 21) {
-        if (aces.length > 1) {
-          totalScore += 1;
-        } else {
-          totalScore += 11;
-        }
-      } else {
-        totalScore += 11;
-      }
-    }
-  });
-
-  return totalScore;
 };

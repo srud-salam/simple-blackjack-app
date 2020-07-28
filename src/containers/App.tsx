@@ -19,7 +19,7 @@ const App: React.FC = () => {
   }
 
   enum Message {
-    hitStick = "Hit or Sick?",
+    hitStick = "Hit or Stick?",
     bust = "Bust!",
     playerWin = "You Win!",
     dealerWin = "Dealer Wins!",
